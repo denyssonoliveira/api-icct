@@ -1,0 +1,44 @@
+📍 Endpoints
+    GET /livro/: Retorna a lista de todos os livros no catálogo.
+    POST /livro/: Cria um novo livro no catálogo.
+        Corpo da Solicitação:
+            {
+                "id":1,
+                "nome": "Nome do Livro",
+                "nomeDoAutor": "Nome do Autor",
+                "lancamento": 2023,
+                "tipo": "Livro",
+                "genero": "Genero do Livro",
+                "editora": "Editora do Livro",
+                "anoEdicao": 2018,
+                "numEdicao": 1
+            }
+    GET /livro/{id}/: Retorna os detalhes de um livro específico com base no ID.
+    PUT /livro/{id}/: Atualiza as informações de um livro específico com base no ID.
+    GET /livro/?search={param}/: Retorna os detalhes de livros baseado em parametros que podem ser: genero, nome do autor, nome do livro, editora ou tipo.
+    DELETE /livro/{id}/: Exclui um livro específico com base no ID.
+
+📄 Modelos de Dados
+
+    Livro:
+        id (campo automático): O identificador único do livro.
+        nome (string): Nome do livro.
+        nomeDoAutor (string): Nome do autor do livro.
+        lancamento (inteiro): Ano de lançamento da primeira versão do livro.
+        numEdicao (inteiro): Número da edição do livro.
+        tipo (string): Tipo do livro (livro, mangá, hq...).
+        genero (string): Genero do livro.
+        editora (string): Nome da editora.
+        anoEdicao (inteiro): Ano de lançamento da edição.
+        numEdicao (inteiro): Numero da edição.
+
+⚙️ Uso da API
+
+A API pode ser usada para:
+
+    Listar todos os livros no catálogo.
+    Adicionar um novo livro ao catálogo.
+    Recuperar detalhes de um livro específico com base no ID.
+    Recupera detalhes de livros com base em seu nome, nome do autor, genero, tipo ou editora
+    Atualizar informações de um livro existente.
+    Excluir um livro específico do catálogo.
